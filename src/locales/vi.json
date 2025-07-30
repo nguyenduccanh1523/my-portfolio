@@ -1,4 +1,10 @@
 {
   "greeting": "Xin chào, tôi là",
-  "projects": "Dự Án Của Tôi"
+  "projects": "Dự Án Của Tôi",
+  "about": "Về Tôi",
+  "contact": "Liên Hệ",
+  "skills": "Kỹ Năng",
+  "experience": "Kinh Nghiệm",
+  "education": "Giáo Dục",
+  "Project Future": "Dự Án Tương Lai"
 }

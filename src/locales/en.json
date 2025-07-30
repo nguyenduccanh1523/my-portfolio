@@ -1,4 +1,10 @@
 {
   "greeting": "Hi, I'm",
-  "projects": "My Projects"
+  "projects": "My Projects",
+  "about": "About",
+  "contact": "Contact",
+  "skills": "Skills",
+  "experience": "Experience",
+  "education": "Education",
+  "Project Future": "Project Future"
 }
