@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
 import Body from '../../components/Body/Body'
+import Footer from '../../components/Footer/Footer'
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <div className='max-w-7xl mx-auto'>
         <Header />
         <Body />
+        <Footer />
       </div>
     </div>
   )

@@ -6,5 +6,12 @@
   "skills": "Skills",
   "experience": "Experience",
   "education": "Education",
-  "Project Future": "Project Future"
+  "Project Future": "Project Future",
+
+  "welcome": "Welcome to my portfolio",
+  "bio": "I am a Web Developer with over 6 months of experience in studying and working. My expertise includes creating and designing websites, working on both front-end and back-end, having experience in n8n automation workflows and much more...",
+
+  "who": "WHO I AM",
+  "portfolio": "Hello! I am a final year student majoring in Information Technology at Thuy Loi University, passionate about programming and web design.",
+  "portfolioDescription": "With a strong desire to learn and high self-learning ability, I have completed many practical projects using ReactJS, Tailwind CSS, NodeJS and other modern technologies. My goal is to become a professional Web Developer, continuously improving my skills and contributing to products that bring practical value to the community. I am always ready to learn new things, challenge myself, and collaborate in creative and professional environments."
 }

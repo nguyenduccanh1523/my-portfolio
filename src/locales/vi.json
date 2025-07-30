@@ -6,5 +6,12 @@
   "skills": "Kỹ Năng",
   "experience": "Kinh Nghiệm",
   "education": "Giáo Dục",
-  "Project Future": "Dự Án Tương Lai"
+  "Project Future": "Dự Án Tương Lai",
+
+  "welcome": "Chào mừng đến với portfolio của tôi",
+  "bio": "Tôi là một Nhà Phát Triển Web với hơn 6 tháng kinh nghiệm trong việc học tập và làm việc. Chuyên môn của tôi bao gồm việc tạo và thiết kế các trang web, làm việc cả ở front-end và back-end, có kinh nghiệm trong các quy trình tự động hóa n8n và nhiều hơn nữa...",
+
+  "who": "TÔI LÀ AI",
+  "portfolio": "Xin chào! Mình là một sinh viên năm cuối ngành Công nghệ thông tin tại Đại học Thủy Lợi, đam mê lập trình và thiết kế web.",
+  "portfolioDescription": "Với tinh thần ham học hỏi và khả năng tự học cao, mình đã hoàn thành nhiều dự án thực tế sử dụng ReactJS, Tailwind CSS, NodeJS và các công nghệ hiện đại khác. Mục tiêu của mình là trở thành một Web Developer chuyên nghiệp, không ngừng hoàn thiện kỹ năng và đóng góp vào những sản phẩm mang lại giá trị thực tiễn cho cộng đồng. Mình luôn sẵn sàng học hỏi cái mới, thử thách bản thân và cộng tác trong những môi trường sáng tạo và chuyên nghiệp."
 }
