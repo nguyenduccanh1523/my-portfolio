@@ -1,11 +1,11 @@
 {
   "greeting": "Xin chào, tôi là",
   "projects": "Dự Án Của Tôi",
+  "services": "Dịch Vụ Của Tôi",
   "about": "Về Tôi",
   "contact": "Liên Hệ",
   "skills": "Kỹ Năng",
-  "experience": "Kinh Nghiệm",
-  "education": "Giáo Dục",
+  "experience&education": "Kinh Nghiệm & Học Vấn",
   "Project Future": "Dự Án Tương Lai",
 
   "welcome": "Chào mừng đến với portfolio của tôi",
@@ -13,5 +13,58 @@
 
   "who": "TÔI LÀ AI",
   "portfolio": "Xin chào! Mình là một sinh viên năm cuối ngành Công nghệ thông tin tại Đại học Thủy Lợi, đam mê lập trình và thiết kế web.",
-  "portfolioDescription": "Với tinh thần ham học hỏi và khả năng tự học cao, mình đã hoàn thành nhiều dự án thực tế sử dụng ReactJS, Tailwind CSS, NodeJS và các công nghệ hiện đại khác. Mục tiêu của mình là trở thành một Web Developer chuyên nghiệp, không ngừng hoàn thiện kỹ năng và đóng góp vào những sản phẩm mang lại giá trị thực tiễn cho cộng đồng. Mình luôn sẵn sàng học hỏi cái mới, thử thách bản thân và cộng tác trong những môi trường sáng tạo và chuyên nghiệp."
+  "portfolioDescription": "Với tinh thần ham học hỏi và khả năng tự học cao, mình đã hoàn thành nhiều dự án thực tế sử dụng ReactJS, Tailwind CSS, NodeJS và các công nghệ hiện đại khác. Mục tiêu của mình là trở thành một Web Developer chuyên nghiệp, không ngừng hoàn thiện kỹ năng và đóng góp vào những sản phẩm mang lại giá trị thực tiễn cho cộng đồng. Mình luôn sẵn sàng học hỏi cái mới, thử thách bản thân và cộng tác trong những môi trường sáng tạo và chuyên nghiệp.",
+
+  "what": "TÔI LÀM GÌ",
+  "serviceDescription": "Tôi cung cấp các dịch vụ phát triển web toàn diện, bao gồm thiết kế giao diện người dùng, phát triển back-end, và tự động hóa quy trình làm việc. Mục tiêu của tôi là tạo ra các giải pháp web hiệu quả và thân thiện với người dùng, giúp doanh nghiệp của bạn phát triển mạnh mẽ hơn.",
+  "webDesign": "Thiết Kế Trang Web Hiện Đại",
+  "webDesignDescription": "Xây dựng giao diện người dùng thân thiện, thẩm mỹ với Tailwind CSS và ReactJS.",
+  "frontEndDevelopment": "Phát Triển Ứng Dụng Web",
+  "frontEndDevelopmentDescription": "Tạo ra các ứng dụng web đáp ứng và tương tác sử dụng ReactJS và các công nghệ front-end hiện đại.",
+  "backEndDevelopment": "Phát Triển API Back-End",
+  "backEndDevelopmentDescription": "Phát triển các ứng dụng và API phía máy chủ mạnh mẽ sử dụng NodeJS và Express.",
+  "automation": "Tự Động Hóa Quy Trình n8n",
+  "automationDescription": "Triển khai các giải pháp tự động hóa sử dụng n8n để tối ưu hóa quy trình làm việc của doanh nghiệp bạn.",
+  "responsiveDesign": "Thiết Kế Responsive",
+  "responsiveDesignDescription": "Đảm bảo trang web của bạn trông tuyệt vời trên mọi thiết bị với các kỹ thuật thiết kế responsive.",
+  "multiLanguage": "Hỗ Trợ Đa Ngôn Ngữ & Chế Độ Tối/Ánh Sáng",
+  "multiLanguageDescription": "Hỗ trợ giao diện song ngữ (Tiếng Anh/Tiếng Việt) và chế độ tối/ánh sáng.",
+
+  "work": "CÔNG VIỆC CỦA TÔI",
+  "projectDescription": "Dự án của tôi là nơi tôi thể hiện kỹ năng và sự sáng tạo trong việc phát triển web. Tôi đã làm việc trên nhiều dự án khác nhau, từ các trang web cá nhân đến các ứng dụng web phức tạp, sử dụng các công nghệ hiện đại để mang lại trải nghiệm người dùng tốt nhất.",
+  "all": "Tất cả",
+  "html": "Html/CSS",
+  "web": "ReactJS/NodeJS/Tailwind CSS",
+  "javascript": "Javascript",
+  "designProject1": "Dự Án Thiết Kế 1",
+
+  "language": "Ngôn Ngữ",
+  "library": "Thư Viện",
+  "database": "Cơ Sở Dữ Liệu",
+  "tool": "Công Cụ Web",
+  "other": "Kỹ Năng Khác",
+
+  "education": "Đại học Thủy Lợi",
+  "educationDescription": "Tôi đang theo học ngành Công nghệ thông tin tại Đại học Thủy Lợi. Nắm vững kiến thức nền tảng: Lập trình, cấu trúc dữ liệu, cơ sở dữ liệu, mạng máy tính.",
+  "gpa": "Điểm trung bình: 7.5/10.0",
+  "gpaDescription": "Đạt học lực Khá – Giỏi nhiều kỳ, chủ động tham gia nghiên cứu và dự án cá nhân.",
+  "company": "Công ty Giải pháp và Đầu tư NetBase JSC",
+  "companyDescription": "Phát triển quy trình tự động hóa quy trình làm việc của công ty, bao gồm các tác vụ như gửi email, quản lý dữ liệu và tích hợp hệ thống, giúp tăng hiệu quả công việc và giảm thiểu lỗi, sử dụng n8n và Javascript để triển khai các giải pháp tự động hóa.",
+  "portfolioWeb": "Trang web Portfolio – ReactJS + Tailwind CSS",
+  "portfolioWebDescription": "Xây dựng portfolio cá nhân có responsive, đa ngôn ngữ và dark/light mode.Thiết kế UI thân thiện, tối ưu SEO cơ bản, cấu trúc thư mục rõ ràng.",
+  "socialWebsite": "SocialV - Nền tảng mạng xã hội kiểu Facebook",
+  "socialWebsiteDescription": "Một mạng xã hội fullstack cho phép người dùng đăng bài, tạo nhóm, sự kiện, gửi tin nhắn, tương tác thời gian thực và nhận thông báo tức thì. Ứng dụng có hệ thống quản trị, xác thực JWT, gửi email xác minh, phân trang, lọc dữ liệu, và dashboard thống kê.",
+
+  "newProject": "Dự Án Mới",
+  "projectfutureDescription": "Dự án tương lai của tôi là nơi tôi sẽ tiếp tục phát triển kỹ năng và sáng tạo trong lĩnh vực phát triển web. Tôi dự định sẽ làm việc trên các dự án mới, áp dụng công nghệ tiên tiến và cải thiện trải nghiệm người dùng.",
+
+  "touch": "Liên hệ",
+  "getinTouch": "Liên hệ với tôi",
+  "getinTouchDescription": "Nếu bạn có bất kỳ câu hỏi nào hoặc muốn thảo luận về một dự án, đừng ngần ngại liên hệ với tôi. Tôi luôn sẵn sàng hỗ trợ và hợp tác.",
+  "home": "Địa chỉ",
+  "phone": "Số điện thoại",
+  "name": "Tên",
+  "message": "Tin nhắn của bạn ở đây...",
+  "subject": "Chủ đề",
+  "send": "Gửi tin nhắn"
 }

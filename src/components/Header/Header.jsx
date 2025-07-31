@@ -4,9 +4,10 @@ import { ThemeContext } from "../../context/ThemeContext.jsx";
 import { useContext } from "react";
 import Switch from "../../pages/ui-verse/dark-mode.jsx";
 import { FaArrowUp } from "react-icons/fa";
-import Flag from 'react-world-flags';
+import Flag from "react-world-flags";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState();
   const { t, i18n } = useTranslation();
   const { dark, setDark } = useContext(ThemeContext);
   const [isSticky, setIsSticky] = useState(false);
@@ -22,14 +23,29 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsSticky(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
       setShowScroll(window.scrollY > 50);
+      // Xác định section đang active
+      const sections = [
+        "about",
+        "services",
+        "projects",
+        "skills",
+        "experience-education",
+        "project-future",
+        "contact",
+      ];
+      let current = sections[0];
+      for (let id of sections) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom > 80) {
+            current = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(current);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -38,6 +54,16 @@ const Header = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  // Hàm scroll đến section
+  const handleNavClick = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActiveSection(id);
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <div
       className={`top-0 w-full z-50 transition-all duration-300 ${
@@ -55,39 +81,88 @@ const Header = () => {
 
         <ul className="hidden md:flex space-x-6 text-sm font-medium">
           <li>
-            <a href="#about" className="hover:text-purple-900">
+            <button
+              className={`hover:text-purple-900 ${
+                activeSection === "about"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("about")}
+            >
               {t("about")}
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#projects" className="hover:text-purple-900">
+            <button
+              className={`hover:text-purple-900 ${
+                activeSection === "services"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("services")}
+            >
+              {t("services")}
+            </button>
+          </li>
+          <li>
+            <button
+              className={`hover:text-purple-900 ${
+                activeSection === "projects"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("projects")}
+            >
               {t("projects")}
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#skills" className="hover:text-purple-900">
+            <button
+              className={`hover:text-purple-900 ${
+                activeSection === "skills"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("skills")}
+            >
               {t("skills")}
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#experience" className="hover:text-purple-900">
-              {t("experience")}
-            </a>
+            <button
+              className={`hover:text-purple-900 ${
+                activeSection === "experience-education"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("experience-education")}
+            >
+              {t("experience&education")}
+            </button>
           </li>
           <li>
-            <a href="#education" className="hover:text-purple-900">
-              {t("education")}
-            </a>
-          </li>
-          <li>
-            <a href="#blog" className="hover:text-purple-900">
+            <button
+              className={`hover:text-purple-900 ${
+                activeSection === "project-future"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("project-future")}
+            >
               {t("Project Future")}
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#contact" className="hover:text-purple-900">
+            <button
+              className={`hover:text-purple-900 ${
+                activeSection === "contact"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("contact")}
+            >
               {t("contact")}
-            </a>
+            </button>
           </li>
         </ul>
 
@@ -97,7 +172,11 @@ const Header = () => {
               onClick={() => setOpenLanguage(!openLanguage)}
               className="flex items-center gap-2 px-3 py-2 text-sm bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              {currentLanguage === "vi" ? <Flag code="VN" style={{ width: 20, height: 14 }} /> : <Flag code="GB" style={{ width: 20, height: 14 }} />}
+              {currentLanguage === "vi" ? (
+                <Flag code="VN" style={{ width: 20, height: 14 }} />
+              ) : (
+                <Flag code="GB" style={{ width: 20, height: 14 }} />
+              )}
               {currentLanguage.toUpperCase()}
               <svg
                 className="w-3 h-3 ml-1"
@@ -125,7 +204,8 @@ const Header = () => {
                   onClick={() => handleLanguageChange("vi")}
                   className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-900 dark:text-white flex items-center gap-2"
                 >
-                  <Flag code="VN" style={{ width: 20, height: 14 }} /> Tiếng Việt
+                  <Flag code="VN" style={{ width: 20, height: 14 }} /> Tiếng
+                  Việt
                 </button>
               </div>
             )}
@@ -155,34 +235,88 @@ const Header = () => {
       {menuOpen && (
         <ul className="md:hidden flex flex-col space-y-4 px-6 pb-6 text-white bg-blue-500 pt-4">
           <li>
-            <a href="#about" className="hover:text-purple-600">
+            <button
+              className={`hover:text-purple-600 ${
+                activeSection === "about"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("about")}
+            >
               About
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#service" className="hover:text-purple-600">
+            <button
+              className={`hover:text-purple-600 ${
+                activeSection === "services"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("services")}
+            >
               Service
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#work" className="hover:text-purple-600">
-              Work
-            </a>
+            <button
+              className={`hover:text-purple-600 ${
+                activeSection === "projects"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("projects")}
+            >
+              Projects
+            </button>
           </li>
           <li>
-            <a href="#resume" className="hover:text-purple-600">
-              Resume
-            </a>
+            <button
+              className={`hover:text-purple-600 ${
+                activeSection === "skills"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("skills")}
+            >
+              Skills
+            </button>
           </li>
           <li>
-            <a href="#blog" className="hover:text-purple-600">
-              Blog
-            </a>
+            <button
+              className={`hover:text-purple-600 ${
+                activeSection === "experience-education"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("experience-education")}
+            >
+              Experience & Education
+            </button>
           </li>
           <li>
-            <a href="#contact" className="hover:text-purple-600">
+            <button
+              className={`hover:text-purple-600 ${
+                activeSection === "project-future"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("project-future")}
+            >
+              Project Future
+            </button>
+          </li>
+          <li>
+            <button
+              className={`hover:text-purple-600 ${
+                activeSection === "contact"
+                  ? "font-bold text-purple-900"
+                  : ""
+              }`}
+              onClick={() => handleNavClick("contact")}
+            >
               Contact
-            </a>
+            </button>
           </li>
         </ul>
       )}
