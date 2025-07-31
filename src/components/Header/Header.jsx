@@ -17,6 +17,7 @@ const Header = () => {
 
   const handleLanguageChange = async (lang) => {
     await i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
     setOpenLanguage(false);
   };
 
@@ -83,9 +84,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-900 ${
-                activeSection === "about"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "about" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("about")}
             >
@@ -95,9 +94,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-900 ${
-                activeSection === "services"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "services" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("services")}
             >
@@ -107,9 +104,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-900 ${
-                activeSection === "projects"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "projects" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("projects")}
             >
@@ -119,9 +114,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-900 ${
-                activeSection === "skills"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "skills" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("skills")}
             >
@@ -155,9 +148,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-900 ${
-                activeSection === "contact"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "contact" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("contact")}
             >
@@ -211,7 +202,47 @@ const Header = () => {
             )}
           </div>
 
-          <Switch dark={dark} setDark={setDark} />
+          {/* Nút toggle dark/light mode đẹp */}
+          <button
+            onClick={() => setDark(!dark)}
+            className={`ml-2 flex items-center px-3 py-2 rounded-full transition-colors duration-300 focus:outline-none shadow ${
+              dark
+                ? "bg-gray-800 text-yellow-400"
+                : "bg-yellow-400 text-gray-800"
+            }`}
+            aria-label="Toggle dark mode"
+          >
+            {dark ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M21.752 15.002A9 9 0 1112.998 2.25a7.5 7.5 0 108.754 12.752z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 3v1.5M12 19.5V21M4.22 4.22l1.06 1.06M18.72 18.72l1.06 1.06M3 12h1.5M19.5 12H21M4.22 19.78l1.06-1.06M18.72 5.28l1.06-1.06M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
+              </svg>
+            )}
+            {dark ? "Dark" : "Light"}
+          </button>
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -237,9 +268,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-600 ${
-                activeSection === "about"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "about" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("about")}
             >
@@ -249,9 +278,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-600 ${
-                activeSection === "services"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "services" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("services")}
             >
@@ -261,9 +288,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-600 ${
-                activeSection === "projects"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "projects" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("projects")}
             >
@@ -273,9 +298,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-600 ${
-                activeSection === "skills"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "skills" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("skills")}
             >
@@ -309,9 +332,7 @@ const Header = () => {
           <li>
             <button
               className={`hover:text-purple-600 ${
-                activeSection === "contact"
-                  ? "font-bold text-purple-900"
-                  : ""
+                activeSection === "contact" ? "font-bold text-purple-900" : ""
               }`}
               onClick={() => handleNavClick("contact")}
             >
