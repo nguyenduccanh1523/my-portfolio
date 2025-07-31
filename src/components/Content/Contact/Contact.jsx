@@ -56,9 +56,7 @@ const Contact = () => {
             <div>
               <h4 className="font-bold text-lg mb-1 text-left">{t("home")}</h4>
               <p className="text-gray-600 text-left">
-                1719 Del Dew Drive Annapolis Junction, MD
-                <br />
-                20701 California, United State
+                Dong Anh, HaNoi.
               </p>
             </div>
           </div>
@@ -67,9 +65,9 @@ const Contact = () => {
             <div>
               <h4 className="font-bold text-lg mb-1">{t("phone")}</h4>
               <p className="text-gray-600">
-                508-992-5074
+                094-555-3908
                 <br />
-                +301-922-9611
+                +84 087-676-1911
               </p>
             </div>
           </div>
@@ -77,7 +75,7 @@ const Contact = () => {
             <FaEnvelope className="text-blue-600 text-3xl" />
             <div>
               <h4 className="font-bold text-lg mb-1 text-left">Email</h4>
-              <p className="text-gray-600">ClarenceSRoberts@jourrapide.com</p>
+              <p className="text-gray-600">nguyenduccanh1523@gmail.com</p>
             </div>
           </div>
         </div>
