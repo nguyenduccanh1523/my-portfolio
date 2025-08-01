@@ -1,44 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import cssfounder from "../../../assets/html-css/css-founder.png";
-import product from "../../../assets/html-css/product-review.png";
-import testimonial from "../../../assets/html-css/testimonial-grid.png";
+
 import ProjectFutureCard from "./ProjectFutureCard";
+import { getProjectFutureData } from "./projectFutureData";
 
 const ProjectFuture = () => {
-  const { t } = useTranslation();
-  const projectData = [
-    {
-      title: t("designProject1"),
-      image: cssfounder,
-      description: t("designProject1Description"),
-      link: "https://example.com/design-project-1",
-      github: "https://example.com/design-project-1",
-    },
-    {
-      title: t("marketingCampaign"),
-      image: product,
-      description: t("marketingCampaignDescription"),
-      link: "https://example.com/marketing-campaign",
-      github: "https://example.com/marketing-campaign",
-    },
-    {
-      title: t("photographyPortfolio"),
-      image: "/images/project3.jpg",
-      description: t("photographyPortfolioDescription"),
-      github: "https://example.com/photography-portfolio",
-    },
-    {
-      title: t("designProject2"),
-      image: testimonial,
-      description: t("designProject2Description"),
-      link: "https://example.com/design-project-2",
-      github: "https://example.com/design-project-2",
-    },
-    // Add more items if needed
-  ];
-
-
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+  const projectData = getProjectFutureData(lang);
 
   return (
     <section className="max-w-7xl mx-auto mt-12 py-12 text-center px-4">
@@ -52,19 +21,16 @@ const ProjectFuture = () => {
         {t("projectfutureDescription")}
       </p>
 
-  
-
       {/* Project Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2  gap-6 ${
+          projectData.length <= 2 ? "md:grid-cols-2" : "md:grid-cols-3"
+        }`}
+      >
         {projectData.map((project, index) => (
-          <ProjectFutureCard
-            key={index}
-            {...project}
-          />
+          <ProjectFutureCard key={index} {...project} />
         ))}
       </div>
-
-      
     </section>
   );
 };

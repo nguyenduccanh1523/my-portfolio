@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eae0d1;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bio{
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.card h2 {
+    font-size: 24px;
+    color: #873636;
+    margin-bottom: 10px;
+}
+
+.prepare {
+    background-color: #f3e6e6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.prepare h3 {
+    font-size: 20px;
+    color: #4b0e52;
+}
+.prepare li {
+    color: #333;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.ingredients li {
+    color: #333;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.instructions li {
+    color: #333;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.kilo {
+    font-weight: bold;
+    color: #cf1818;
+}

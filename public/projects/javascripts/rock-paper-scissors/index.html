@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+      }
+      .title {
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .move-icon {
+        width: 100px;
+        height: 100px;
+      }
+      .move-button {
+        background-color: #000000;
+        border: 5px solid #ffffff;
+        padding: 50px;
+        margin: 10px;
+        border-radius: 150px;
+        cursor: pointer;
+      }
+      .result {
+        font-size: 24px;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .reset-button {
+        background-color: #ffffff;
+        color: black;
+        padding: 10px 20px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button
+      onclick="
+      playGame('Rock');
+      "
+      class="move-button"
+    >
+      <img src="./images/rock-emoji.png" alt="Rock" class="move-icon" />
+    </button>
+
+    <button
+      onclick="
+      playGame('Paper');
+      "
+      class="move-button"
+    >
+      <img src="./images/paper-emoji.png" alt="Paper" class="move-icon" />
+    </button>
+
+    <button
+      onclick="
+      playGame('Scissors');
+      "
+      class="move-button"
+    >
+      <img src="./images/scissors-emoji.png" alt="Scissors" class="move-icon" />
+    </button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+
+    <button
+      onclick="
+    resetScore();
+    "
+      class="reset-button"
+    >
+      Reset Score
+    </button>
+
+    <script>
+      const score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        losses: 0,
+        ties: 0,
+      };
+
+      updateScore();
+
+      function resetScore() {
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.setItem("score", JSON.stringify(score));
+        updateScore();
+        alert("Score has been reset!");
+      }
+
+      function playGame(playerMove) {
+        const computerChoice = pickComputerMover();
+
+        let result = "";
+
+        if (playerMove === "Scissors") {
+          if (computerChoice === "Rock") {
+            result = "You lose!";
+          } else if (computerChoice === "Paper") {
+            result = "You win!";
+          } else {
+            result = "It's a tie!";
+          }
+        } else if (playerMove === "Paper") {
+          if (computerChoice === "Rock") {
+            result = "You win!";
+          } else if (computerChoice === "Paper") {
+            result = "It's a tie!";
+          } else {
+            result = "You lose!";
+          }
+        } else {
+          // playerMove is 'Rock'
+          if (computerChoice === "Rock") {
+            result = "It's a tie!";
+          } else if (computerChoice === "Paper") {
+            result = "You lose!";
+          } else {
+            result = "You win!";
+          }
+        }
+
+        if (result === "You win!") {
+          score.wins++;
+        } else if (result === "You lose!") {
+          score.losses++;
+        } else {
+          score.ties++;
+        }
+
+        localStorage.setItem("score", JSON.stringify(score));
+
+        updateScore();
+
+        document.querySelector(".js-result").innerHTML = result;
+        document.querySelector(
+          ".js-moves"
+        ).innerHTML = `You <img src="./images/${playerMove.toLowerCase()}-emoji.png" class="move-icon" >
+      <img src="./images/${computerChoice.toLowerCase()}-emoji.png" class="move-icon" >
+      Computer`;
+      }
+
+      function updateScore() {
+        document.querySelector(
+          ".js-score"
+        ).innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+      }
+
+      function pickComputerMover() {
+        const randomNumber = Math.random();
+        let computerChoice = "";
+
+        if (randomNumber < 0.33) {
+          computerChoice = "Rock";
+        } else if (randomNumber < 0.66) {
+          computerChoice = "Paper";
+        } else {
+          computerChoice = "Scissors";
+        }
+
+        return computerChoice;
+      }
+    </script>
+  </body>
+</html>

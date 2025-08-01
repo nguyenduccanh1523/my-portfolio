@@ -3,52 +3,20 @@ import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
-import cssfounder from "../../../assets/html-css/css-founder.png";
-import product from "../../../assets/html-css/product-review.png";
-import testimonial from "../../../assets/html-css/testimonial-grid.png";
+
+import { getProjectData } from "./projectData";
 
 const Project = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language; // 'en' hoặc 'vi'
   const categories = [
     { key: "all", label: t("all") },
     { key: "html", label: t("html") },
     { key: "web", label: t("web") },
     { key: "javascript", label: t("javascript") },
+    { key: "n8n", label: t("n8n") },
   ];
-  const projectData = [
-    {
-      title: t("designProject1"),
-      image: cssfounder,
-      category: "html",
-      description: t("designProject1Description"),
-      link: "https://example.com/design-project-1",
-      github: "https://example.com/design-project-1",
-    },
-    {
-      title: t("marketingCampaign"),
-      image: product,
-      category: "web",
-      description: t("marketingCampaignDescription"),
-      link: "https://example.com/marketing-campaign",
-      github: "https://example.com/marketing-campaign",
-    },
-    {
-      title: t("photographyPortfolio"),
-      image: "/images/project3.jpg",
-      category: "javascript",
-      description: t("photographyPortfolioDescription"),
-      github: "https://example.com/photography-portfolio",
-    },
-    {
-      title: t("designProject2"),
-      image: testimonial,
-      category: "html",
-      description: t("designProject2Description"),
-      link: "https://example.com/design-project-2",
-      github: "https://example.com/design-project-2",
-    },
-    // Add more items if needed
-  ];
+  const projectData = getProjectData(lang);
 
   const [activeCategory, setActiveCategory] = useState(categories[0].key);
   const [modalOpen, setModalOpen] = useState(false);
