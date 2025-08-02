@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../../context/ThemeContext.jsx";
 import { useContext } from "react";
-import Switch from "../../pages/ui-verse/dark-mode.jsx";
 import { FaArrowUp } from "react-icons/fa";
 import Flag from "react-world-flags";
 const Header = () => {
