@@ -70,4 +70,14 @@ export const projectTexts = {
       description: "Một hệ thống quản lý kho fullstack cho phép người dùng quản lý sản phẩm, nhà cung cấp và khách hàng. Ứng dụng bao gồm các tính năng như quản lý sản phẩm, quản lý nhà cung cấp, quản lý khách hàng và xử lý đơn hàng.",
     },
   },
+  todoJS: {
+    en: {
+      title: "Todo List & Calculator & Weather App",
+      description: "A fullstack todo list application that allows users to manage their tasks, a calculator for basic arithmetic operations, and a weather app that provides real-time weather updates.",
+    },
+    vi: {
+      title: "Danh sách việc cần làm & Máy tính & Ứng dụng thời tiết",
+      description: "Một ứng dụng danh sách việc cần làm fullstack cho phép người dùng quản lý công việc của họ, một máy tính cho các phép toán số học cơ bản và một ứng dụng thời tiết cung cấp cập nhật thời tiết theo thời gian thực.",
+    },
+  },
 };

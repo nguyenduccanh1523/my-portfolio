@@ -6,6 +6,7 @@ import rsp from "../../../assets/js/rock-paper-scissors.png";
 import menuCard from "../../../assets/html-css/menuCard.png";
 import warehouse from "../../../assets/react/warehouse.png";
 import socialMedia from "../../../assets/react/socialv.png";
+import todoJS from "../../../assets/js/todo-cal-weather.png";
 import { projectTexts } from "./projectTexts";
 
 // Hàm nhận t (i18n) để trả về mảng projectData
@@ -64,6 +65,14 @@ export const getProjectData = (lang) => [
     category: "html",
     description: projectTexts.menuCard[lang].description,
     link: "/projects/menuCard/index.html",
+    github: "https://github.com/nguyenduccanh1523/course-fe",
+  },
+  {
+    title: projectTexts.todoJS[lang].title,
+    image: todoJS,
+    category: "javascript",
+    description: projectTexts.todoJS[lang].description,
+    link: "/projects/javascripts/todoJS/index.html",
     github: "https://github.com/nguyenduccanh1523/course-fe",
   },
   
