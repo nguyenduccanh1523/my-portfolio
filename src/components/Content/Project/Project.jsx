@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 import ProjectCard from "./ProjectCard";
@@ -21,11 +21,16 @@ const Project = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0].key);
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const ITEMS_PER_PAGE = 8;
+  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
 
   const filteredProjects =
     activeCategory === "all"
       ? projectData
       : projectData.filter((item) => item.category === activeCategory);
+
+  // Chỉ hiển thị số lượng item theo visibleCount
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -35,6 +40,11 @@ const Project = () => {
     setModalOpen(false);
     setSelectedProject(null);
   };
+
+  // Reset visibleCount khi đổi category
+  useEffect(() => {
+    setVisibleCount(ITEMS_PER_PAGE);
+  }, [activeCategory]);
 
   return (
     <section className="max-w-7xl mx-auto mt-12 py-12 text-center px-4">
@@ -70,13 +80,24 @@ const Project = () => {
 
       {/* Project Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        {filteredProjects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <ProjectCard
             key={index}
             {...project}
             onClick={() => openModal(project)}
           />
         ))}
+      </div>
+
+      <div>
+        {visibleCount < filteredProjects.length && (
+          <button
+            onClick={() => setVisibleCount((prev) => prev + ITEMS_PER_PAGE)}
+            className="mt-8 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+          >
+            {t("readmore")}
+          </button>
+        )}
       </div>
 
       {/* Modal chi tiết dự án dùng Ant Design */}

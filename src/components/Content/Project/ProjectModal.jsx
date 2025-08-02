@@ -25,6 +25,9 @@ const ProjectModal = ({ visible, onClose, project }) => {
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             {project.description}
           </p>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            {project.note}
+          </p>
           <div className="flex gap-4">
             {project.link && (
               <a
@@ -34,6 +37,16 @@ const ProjectModal = ({ visible, onClose, project }) => {
                 className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
               >
                 Demo
+              </a>
+            )}
+            {project.json && (
+              <a
+                href={project.json}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700 dark:text-white transition"
+              >
+                Download JSON
               </a>
             )}
             {project.github && (
