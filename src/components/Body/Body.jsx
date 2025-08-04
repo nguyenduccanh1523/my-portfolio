@@ -45,7 +45,7 @@ const Body = () => {
           <ul className="flex space-x-3 justify-center mt-6">
             <li>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/nguyen.uc.canh.186227/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 border border-gray-300 text-gray-900 rounded-full hover:bg-gray-200 transition-colors"
@@ -55,7 +55,7 @@ const Body = () => {
             </li>
             <li>
               <a
-                href="https://github.com"
+                href="https://github.com/nguyenduccanh1523"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 border border-gray-300 text-gray-900 rounded-full hover:bg-gray-200 transition-colors"
@@ -65,7 +65,7 @@ const Body = () => {
             </li>
             <li>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/duccank19_0_o/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 border border-gray-300 text-gray-900 rounded-full hover:bg-gray-200 transition-colors"
@@ -75,7 +75,7 @@ const Body = () => {
             </li>
             <li>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/c%E1%BA%A3nh-nguy%E1%BB%85n-648a79268/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 border border-gray-300 text-gray-900 rounded-full hover:bg-gray-200 transition-colors"
