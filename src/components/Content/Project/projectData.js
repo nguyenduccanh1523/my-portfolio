@@ -10,6 +10,7 @@ import todoJS from "../../../assets/js/todo-cal-weather.png";
 import n8naifb from "../../../assets/n8n/n8naiagentfb.png";
 import n8nvideo from "../../../assets/n8n/n8nshortvideo.png";
 import n8nsocial from "../../../assets/n8n/n8nsocialpost.png";
+import myappinter from "../../../assets/react/myappinter.png";
 import { projectTexts } from "./projectTexts";
 
 // Hàm nhận t (i18n) để trả về mảng projectData
@@ -30,14 +31,13 @@ export const getProjectData = (lang) => [
     link: "/projects/menuCard/index.html",
     github: "https://github.com/nguyenduccanh1523/course-fe",
   },
-
   {
     title: projectTexts.socialMedia[lang].title,
     image: socialMedia,
     category: "web",
     description: projectTexts.socialMedia[lang].description,
     link: "http://socialv-net.id.vn/",
-    github: "https://github.com/nguyenduccanh1523/course-fe",
+    github: "https://github.com/nguyenduccanh1523/social-project",
   },
   {
     title: projectTexts.rsp[lang].title,
@@ -47,22 +47,22 @@ export const getProjectData = (lang) => [
     link: "/projects/javascripts/rock-paper-scissors/index.html",
     github: "https://github.com/nguyenduccanh1523/course-fe",
   },
-
   {
-    title: projectTexts.todoJS[lang].title,
-    image: todoJS,
-    category: "javascript",
-    description: projectTexts.todoJS[lang].description,
-    link: "/projects/javascripts/todoJS/index.html",
-    github: "https://github.com/nguyenduccanh1523/course-fe",
+    title: projectTexts.myappinter[lang].title,
+    image: myappinter,
+    category: "web",
+    description: projectTexts.myappinter[lang].description,
+    link: "https://endearing-mousse-9f3cad.netlify.app/",
+    github: "https://github.com/nguyenduccanh1523/intermediate-react",
   },
+  
   {
     title: projectTexts.n8nshortVideo[lang].title,
     image: n8nvideo,
     category: "n8n",
     description: projectTexts.n8nshortVideo[lang].description,
     note: projectTexts.n8nnote[lang].description,
-    json: '/json/shortvideo.json',
+    json: "/json/shortvideo.json",
   },
   {
     title: projectTexts.productReview[lang].title,
@@ -102,6 +102,14 @@ export const getProjectData = (lang) => [
     category: "html",
     description: projectTexts.testimonial[lang].description,
     link: "/projects/testimonial/index.html",
+    github: "https://github.com/nguyenduccanh1523/course-fe",
+  },
+  {
+    title: projectTexts.todoJS[lang].title,
+    image: todoJS,
+    category: "javascript",
+    description: projectTexts.todoJS[lang].description,
+    link: "/projects/javascripts/todoJS/index.html",
     github: "https://github.com/nguyenduccanh1523/course-fe",
   },
 ];

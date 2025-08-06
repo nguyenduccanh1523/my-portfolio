@@ -4,6 +4,7 @@ import { ThemeContext } from "../../context/ThemeContext.jsx";
 import { useContext } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import Flag from "react-world-flags";
+import logo from "../../assets/logo.png"; // Import logo if needed
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState();
@@ -77,7 +78,11 @@ const Header = () => {
           isSticky ? "text-gray-900" : "text-white"
         } dark:text-white`}
       >
-        <h1 className="text-xl font-bold">NDC</h1>
+        <img
+          src={logo}
+          alt="Logo"
+          className={`w-24 rounded-full `}
+        />
 
         <ul className="hidden md:flex space-x-6 text-sm font-medium">
           <li>
