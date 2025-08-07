@@ -11,6 +11,7 @@ import n8naifb from "../../../assets/n8n/n8naiagentfb.png";
 import n8nvideo from "../../../assets/n8n/n8nshortvideo.png";
 import n8nsocial from "../../../assets/n8n/n8nsocialpost.png";
 import myappinter from "../../../assets/react/myappinter.png";
+import bewarehouse from "../../../assets/node/bewarehouse.png";
 import { projectTexts } from "./projectTexts";
 
 // Hàm nhận t (i18n) để trả về mảng projectData
@@ -55,7 +56,6 @@ export const getProjectData = (lang) => [
     link: "https://endearing-mousse-9f3cad.netlify.app/",
     github: "https://github.com/nguyenduccanh1523/intermediate-react",
   },
-  
   {
     title: projectTexts.n8nshortVideo[lang].title,
     image: n8nvideo,
@@ -63,6 +63,14 @@ export const getProjectData = (lang) => [
     description: projectTexts.n8nshortVideo[lang].description,
     note: projectTexts.n8nnote[lang].description,
     json: "/json/shortvideo.json",
+  },
+  {
+    title: projectTexts.bewarehouse[lang].title,
+    image: bewarehouse,
+    category: "web",
+    description: projectTexts.bewarehouse[lang].description,
+    link: "https://be-warehouse-production.up.railway.app/api-docs/",
+    github: "https://github.com/nguyenduccanh1523/be-warehouse",
   },
   {
     title: projectTexts.productReview[lang].title,

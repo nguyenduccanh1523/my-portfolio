@@ -152,4 +152,16 @@ export const projectTexts = {
         "Website của tôi được xây dựng bằng React với giao diện hiện đại và thân thiện. Trang cung cấp một bộ công cụ tiện ích bao gồm:\n\n✅ Quản lý công việc (Todolist): dễ dàng thêm, chỉnh sửa và đánh dấu hoàn thành.\n\n🌦️ Xem thời tiết theo thời gian thực, cập nhật chính xác cho hôm nay và 5 ngày tới.\n\n🛒 Hiển thị danh sách sản phẩm, hỗ trợ thêm vào giỏ hàng và danh sách yêu thích.\n\n🎨 Sử dụng template website mẫu miễn phí, tối ưu cho desktop và mobile.\n\nTrang web phù hợp cho cá nhân học tập hoặc làm demo dự án thực tế với trải nghiệm người dùng mượt mà và đầy đủ tính năng cơ bản.",
     },
   },
+  bewarehouse: {
+    en: {
+      title: "Backend Warehouse",
+      description:
+        "🛠️ Full-featured backend system for warehouse management\n\n✅ CRUD for Customers, Suppliers, Products, Orders, Order Items\n🔐 Role-based access with accessToken and refreshToken\n📦 Auto-update stock when orders are created or deleted\n🔍 Filter & sort via flexible SQL queries",
+    },
+    vi: {
+      title: "Hệ thống quản lý kho Backend",
+      description:
+        "🛠️ Hệ thống backend quản lý kho đầy đủ chức năng\n\n✅ CRUD cho Khách hàng, Nhà cung cấp, Sản phẩm, Đơn hàng, Chi tiết đơn hàng\n🔐 Phân quyền bằng accessToken và refreshToken\n📦 Tự động cập nhật tồn kho khi tạo hoặc xóa đơn hàng\n🔍 Hỗ trợ lọc & sắp xếp bằng truy vấn SQL linh hoạt",
+    },
+  },
 };
