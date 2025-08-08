@@ -21,7 +21,7 @@ export const getProjectData = (lang) => [
     image: warehouse,
     category: "web",
     description: projectTexts.warehouse[lang].description,
-    link: "/projects/warehouse/index.html",
+    link: "https://timely-babka-b95bf5.netlify.app",
     github: "https://github.com/nguyenduccanh1523/warehouse",
   },
   {

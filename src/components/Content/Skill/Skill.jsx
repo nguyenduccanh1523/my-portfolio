@@ -14,12 +14,18 @@ const Skill = () => {
     {
       title: t("language"),
       icon: <FaHtml5 size={20} />,
-      items: ["JavaScript", "TypeScript", "Python", "HTML", "CSS", "C++"],
+      items: ["JavaScript", "TypeScript", "C#", "HTML", "CSS", "C++"],
     },
     {
       title: t("library"),
       icon: <FaReact size={20} />,
-      items: ["React", "Next.js", "Tailwind CSS", "Bootstrap", "Express.js"],
+      items: [
+        "React",
+        "Next.js",
+        "Node.js, Express.js",
+        "Tailwind CSS",
+        "Bootstrap",
+      ],
     },
     {
       title: t("database"),
@@ -35,6 +41,11 @@ const Skill = () => {
       title: t("other"),
       icon: <FaTools size={20} />,
       items: ["Git & GitHub", "Figma", "Docker", "n8n"],
+    },
+    {
+      title: t("spokenLanguages"),
+      icon: <FaTools size={20} />,
+      items: [t("spoken1"), t("spoken2")],
     },
   ];
   return (

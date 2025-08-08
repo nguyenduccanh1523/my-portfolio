@@ -74,12 +74,12 @@ export const projectTexts = {
     en: {
       title: "Warehouse Management System",
       description:
-        "A fullstack warehouse management system that allows users to manage products, suppliers, and customers. The app includes features like product management, supplier management, customer management, and order processing.",
+        "A fullstack warehouse management system that allows users to manage products, suppliers, and customers. The app includes features like product management, supplier management, customer management, and order processing.\n\n Using TypeScript\n\nLogin credentials: admin\nPassword: 123456",
     },
     vi: {
       title: "Hệ thống quản lý kho",
       description:
-        "Một hệ thống quản lý kho fullstack cho phép người dùng quản lý sản phẩm, nhà cung cấp và khách hàng. Ứng dụng bao gồm các tính năng như quản lý sản phẩm, quản lý nhà cung cấp, quản lý khách hàng và xử lý đơn hàng.",
+        "Một hệ thống quản lý kho fullstack cho phép người dùng quản lý sản phẩm, nhà cung cấp và khách hàng. Ứng dụng bao gồm các tính năng như quản lý sản phẩm, quản lý nhà cung cấp, quản lý khách hàng và xử lý đơn hàng.\n\n Sử dụng ngôn ngữ TypeScript\n\nTài khoản đăng nhập: admin\nMật khẩu: 123456",
     },
   },
   todoJS: {
