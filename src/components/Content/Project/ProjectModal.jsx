@@ -1,8 +1,18 @@
 import React from "react";
 import { Modal, Button } from "antd";
+import { openLinkWithFallback } from "../../../utils/linkUtils";
 
 const ProjectModal = ({ visible, onClose, project }) => {
   if (!project) return null;
+
+  const handleDemoClick = (e) => {
+    e.preventDefault();
+    if (project.fallbackLink) {
+      openLinkWithFallback(project.link, project.fallbackLink);
+    } else {
+      window.open(project.link, "_blank");
+    }
+  };
   return (
     <Modal
       open={visible}
@@ -30,14 +40,12 @@ const ProjectModal = ({ visible, onClose, project }) => {
           </p>
           <div className="flex gap-4">
             {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={handleDemoClick}
                 className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
               >
                 Demo
-              </a>
+              </button>
             )}
             {project.json && (
               <a

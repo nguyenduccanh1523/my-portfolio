@@ -38,6 +38,7 @@ export const getProjectData = (lang) => [
     category: "web",
     description: projectTexts.socialMedia[lang].description,
     link: "http://socialv-net.id.vn/",
+    fallbackLink: "https://timely-naiad-4247ab.netlify.app/",
     github: "https://github.com/nguyenduccanh1523/social-project",
   },
   {
